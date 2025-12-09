@@ -1,4 +1,5 @@
 {
+  "exclude": ["node_modules", "src/assets"],
   "compilerOptions": {
     "target": "es5",
     "module": "es6",
