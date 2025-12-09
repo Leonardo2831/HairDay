@@ -2,7 +2,7 @@
 const path = require("path");
 
 module.exports = {
-    entry: "./src/javascript/script.ts",
+    entry: "./src/typescript/script.ts",
     output: {
         path: path.resolve(__dirname, "src"),
         filename: "main.js",

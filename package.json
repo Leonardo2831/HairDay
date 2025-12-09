@@ -4,7 +4,7 @@
   "author": "Leonardo Reis Ferraz",
   "version": "1.0.0",
   "scripts": {
-    "server": "json-server --watch src/data/server.json --port 3333",
+    "server": "json-server --watch src/database/server.json --port 3333",
     "build": "webpack --mode production",
     "dev": "webpack server --watch --mode development"
   },

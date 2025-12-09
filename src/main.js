@@ -20,14 +20,14 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 
 /***/ }),
 
-/***/ "./src/javascript/script.ts":
+/***/ "./src/typescript/script.ts":
 /*!**********************************!*\
-  !*** ./src/javascript/script.ts ***!
+  !*** ./src/typescript/script.ts ***!
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n\n\n//# sourceURL=webpack://hairday/./src/javascript/script.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n\n\n//# sourceURL=webpack://hairday/./src/typescript/script.ts?");
 
 /***/ }),
 
@@ -254,7 +254,7 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("0458a2d065f21b98d348")
+/******/ 		__webpack_require__.h = () => ("80f707e74938e2075ec1")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -1270,7 +1270,7 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 /******/ 	// Load entry module and return exports
 /******/ 	__webpack_require__("./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=info&overlay=true&reconnect=10&hot=true&live-reload=true");
 /******/ 	__webpack_require__("./node_modules/webpack/hot/dev-server.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/javascript/script.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/typescript/script.ts");
 /******/ 	
 /******/ })()
 ;
