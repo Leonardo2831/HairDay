@@ -1,0 +1,31 @@
+{
+  "name": "hairday",
+  "description": "Aplicação Web para agendamento de corte de cabelo.",
+  "author": "Leonardo Reis Ferraz",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "json-server --watch src/data/server.json --port 3333",
+    "build": "webpack --mode production",
+    "dev": "webpack server --watch --mode development"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.28.4",
+    "dayjs": "^1.11.10",
+    "json-server": "^1.0.0-alpha.21"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-transform-runtime": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@eslint/js": "^9.39.1",
+    "babel-loader": "^10.0.0",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.49.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
