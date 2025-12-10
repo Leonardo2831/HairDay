@@ -1,1 +1,4 @@
-import dayjs from "../lib/dayjs";
+import initSubmitEvent from "./form/submit";
+import './page-load';
+
+initSubmitEvent();
