@@ -3,6 +3,7 @@
   "description": "Aplicação Web para agendamento de corte de cabelo.",
   "author": "Leonardo Reis Ferraz",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "server": "json-server --watch src/database/server.json --port 3333",
     "build": "webpack --mode production",
