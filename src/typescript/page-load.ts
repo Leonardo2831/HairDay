@@ -1,5 +1,5 @@
-import initScheduleLoad from "./schedules/load";
+import scheduleLoad from "./schedules/load";
 
 document.addEventListener('DOMContentLoaded', () => {
-    initScheduleLoad();
+    scheduleLoad();
 });

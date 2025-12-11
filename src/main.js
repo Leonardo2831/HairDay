@@ -31,6 +31,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/services/schedule-fetch.ts":
+/*!****************************************!*\
+  !*** ./src/services/schedule-fetch.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ scheduleFetch)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _api_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-config */ \"./src/services/api-config.ts\");\n\n\n\n\nfunction scheduleFetch(_x) {\n  return _scheduleFetch.apply(this, arguments);\n}\nfunction _scheduleFetch() {\n  _scheduleFetch = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(_ref) {\n    var date, response, data, dailySchedules, _t;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          date = _ref.date;\n          _context.prev = 1;\n          _context.next = 2;\n          return fetch(\"\".concat(_api_config__WEBPACK_IMPORTED_MODULE_3__.apiConfig.baseUrl, \"/schedules\"));\n        case 2:\n          response = _context.sent;\n          _context.next = 3;\n          return response.json();\n        case 3:\n          data = _context.sent;\n          dailySchedules = data.filter(function (schedule) {\n            return dayjs__WEBPACK_IMPORTED_MODULE_2___default()(date).format('YYYY-MM-DD') === dayjs__WEBPACK_IMPORTED_MODULE_2___default()(schedule.when).format('YYYY-MM-DD');\n          });\n          return _context.abrupt(\"return\", dailySchedules);\n        case 4:\n          _context.prev = 4;\n          _t = _context[\"catch\"](1);\n          console.log(_t);\n          alert(\"Não foi possível buscar os agendamentos do dia selecionado. Tente novamente mais tarde.\");\n        case 5:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee, null, [[1, 4]]);\n  }));\n  return _scheduleFetch.apply(this, arguments);\n}\n\n//# sourceURL=webpack://hairday/./src/services/schedule-fetch.ts?");
+
+/***/ }),
+
 /***/ "./src/services/schedule-new.ts":
 /*!**************************************!*\
   !*** ./src/services/schedule-new.ts ***!
@@ -49,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hours_load__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hours-load */ \"./src/typescript/form/hours-load.ts\");\n\nvar selectedDate = document.querySelector('#date');\nselectedDate.addEventListener('change', function () {\n  var date = selectedDate.value;\n  (0,_hours_load__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n    date: date\n  });\n});\n\n//# sourceURL=webpack://hairday/./src/typescript/form/date-change.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _schedules_load__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../schedules/load */ \"./src/typescript/schedules/load.ts\");\n\nvar selectedDate = document.querySelector('#date');\nselectedDate.addEventListener('change', function () {\n  (0,_schedules_load__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n\n//# sourceURL=webpack://hairday/./src/typescript/form/date-change.ts?");
 
 /***/ }),
 
@@ -104,7 +115,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sch
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initScheduleLoad)\n/* harmony export */ });\n/* harmony import */ var _form_hours_load__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../form/hours-load */ \"./src/typescript/form/hours-load.ts\");\n\nfunction initScheduleLoad() {\n  var selectedDate = document.querySelector('#date');\n  var date = selectedDate.value;\n  (0,_form_hours_load__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n    date: date\n  });\n}\n\n//# sourceURL=webpack://hairday/./src/typescript/schedules/load.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ scheduleLoad)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _form_hours_load__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../form/hours-load */ \"./src/typescript/form/hours-load.ts\");\n/* harmony import */ var _services_schedule_fetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/schedule-fetch */ \"./src/services/schedule-fetch.ts\");\n/* harmony import */ var _show__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./show */ \"./src/typescript/schedules/show.ts\");\n\n\n\n\n\nfunction scheduleLoad() {\n  return _scheduleLoad.apply(this, arguments);\n}\nfunction _scheduleLoad() {\n  _scheduleLoad = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var selectedDate, date, dailySchedules;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          selectedDate = document.querySelector('#date');\n          date = selectedDate.value;\n          _context.next = 1;\n          return (0,_services_schedule_fetch__WEBPACK_IMPORTED_MODULE_3__[\"default\"])({\n            date: date\n          });\n        case 1:\n          dailySchedules = _context.sent;\n          (0,_show__WEBPACK_IMPORTED_MODULE_4__[\"default\"])({\n            dailySchedules: dailySchedules\n          });\n          (0,_form_hours_load__WEBPACK_IMPORTED_MODULE_2__[\"default\"])({\n            date: date\n          });\n        case 2:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee);\n  }));\n  return _scheduleLoad.apply(this, arguments);\n}\n\n//# sourceURL=webpack://hairday/./src/typescript/schedules/load.ts?");
+
+/***/ }),
+
+/***/ "./src/typescript/schedules/show.ts":
+/*!******************************************!*\
+  !*** ./src/typescript/schedules/show.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ scheduleShow)\n/* harmony export */ });\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);\n\nvar periodMorning = document.querySelector('#period-morning');\nvar periodAfternoon = document.querySelector('#period-afternoon');\nvar periodEvening = document.querySelector('#period-night');\nfunction scheduleShow(_ref) {\n  var dailySchedules = _ref.dailySchedules;\n  try {\n    periodMorning.innerHTML = '';\n    periodAfternoon.innerHTML = '';\n    periodEvening.innerHTML = '';\n    dailySchedules.forEach(function (schedule) {\n      var li = document.createElement('li');\n      var time = document.createElement('strong');\n      var name = document.createElement('span');\n      li.setAttribute('data-id', schedule.id);\n      time.textContent = dayjs__WEBPACK_IMPORTED_MODULE_0___default()(schedule.when).format('HH:mm');\n      name.textContent = schedule.name;\n      var cancelIcon = document.createElement('img');\n      cancelIcon.classList.add('cancel-icon');\n      cancelIcon.setAttribute('src', './src/assets/cancel.svg');\n      cancelIcon.setAttribute('alt', 'Cancelar');\n      li.append(time, name, cancelIcon);\n      var hour = dayjs__WEBPACK_IMPORTED_MODULE_0___default()(schedule.when).hour();\n      if (hour < 12) {\n        periodMorning.appendChild(li);\n      } else if (hour < 18) {\n        periodAfternoon.appendChild(li);\n      } else {\n        periodEvening.appendChild(li);\n      }\n    });\n  } catch (error) {\n    console.log(error);\n    alert(\"Não foi possível exibir os agendamentos do dia selecionado. Tente novamente mais tarde.\");\n  }\n}\n\n//# sourceURL=webpack://hairday/./src/typescript/schedules/show.ts?");
 
 /***/ }),
 
@@ -550,7 +572,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d904f06756c56b0c596a")
+/******/ 		__webpack_require__.h = () => ("40ed5cdab80452b7c31f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
