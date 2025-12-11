@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { scheduleNew } from "../../services/schedule-new";
+import scheduleLoad from "../schedules/load";
 
 export default function initSubmitEvent(){
     const form = document.querySelector('form') as HTMLFormElement;
@@ -33,6 +34,9 @@ export default function initSubmitEvent(){
 
             await scheduleNew({ id, name, when });
 
+            await scheduleLoad();
+
+            clientName.value = '';
         } catch(error) {
             alert("Não foi possível realizar o agendamento. ");
 
