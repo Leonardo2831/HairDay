@@ -30,7 +30,7 @@ export default function initSubmitEvent(){
 
             const when = dayjs(selectedDate.value).add(Number(hour), 'hour');
 
-            const id : number = new Date().getTime();
+            const id : string = new Date().getTime().toString();
 
             await scheduleNew({ id, name, when });
 
