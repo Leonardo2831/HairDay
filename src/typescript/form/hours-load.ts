@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import { openingHours } from "../../utils/opening-hours";
 import hoursActive from "./hours-active";
 
-export default function initHoursLoad({ date }: { date: string }) {
+export default function hoursLoad({ date }: { date: string }) {
     const opening : { hour: string; available: boolean }[] = 
     openingHours.map((hour) => {
         const [scheduleHour] : string[] = hour.split(':');
@@ -16,6 +16,7 @@ export default function initHoursLoad({ date }: { date: string }) {
     });
 
     const hours = document.querySelector('#hours') as HTMLUListElement;
+    hours.innerHTML = '';
 
     function hourHeaderAdd(title : string){
         const header = document.createElement('li');
