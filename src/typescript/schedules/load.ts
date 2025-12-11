@@ -9,5 +9,5 @@ export default async function scheduleLoad(){
     const dailySchedules = await scheduleFetch({ date });
     scheduleShow({ dailySchedules });
 
-    hoursLoad({ date });
+    hoursLoad({ date, dailySchedules });
 }

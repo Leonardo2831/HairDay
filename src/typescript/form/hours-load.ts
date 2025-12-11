@@ -2,16 +2,20 @@ import dayjs from "dayjs";
 import { openingHours } from "../../utils/opening-hours";
 import hoursActive from "./hours-active";
 
-export default function hoursLoad({ date }: { date: string }) {
+export default function hoursLoad({ date, dailySchedules }: { date: string, dailySchedules: { when: string }[] }) {
+    const unavailableHours : string[] = dailySchedules.map((schedule) => dayjs(schedule.when).format('HH:mm'));
+
     const opening : { hour: string; available: boolean }[] = 
     openingHours.map((hour) => {
         const [scheduleHour] : string[] = hour.split(':');
 
-        const isHourPast : boolean = dayjs(date).add(Number(scheduleHour), 'hour').isAfter(dayjs());
+        const isHourPast : boolean = dayjs(date).add(Number(scheduleHour), 'hour').isBefore(dayjs());
+
+        const available = !unavailableHours.includes(hour) && !isHourPast;
 
         return {
             hour,
-            available: isHourPast,
+            available,
         };
     });
 
